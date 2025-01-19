@@ -11,7 +11,7 @@ extern ssize_t small_write(int __fd, const void * __buf, size_t __nbyte);
 int main(void) {
     char command[255];
     while ( 1 ) {
-        small_write (1, "tinyshell# ", 2);
+        small_write (1, "tinyshell# ", 11);
         int command_characters = small_read(0, command, 255);
         command[command_characters -1] = 0;
         pid_t fork_result = small_fork();
